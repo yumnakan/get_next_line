@@ -6,7 +6,7 @@
 /*   By: yumnakan <robynmao@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/26 13:30:02 by yumnakan          #+#    #+#             */
-/*   Updated: 2023/04/01 19:30:45 by yumnakan         ###   ########.fr       */
+/*   Updated: 2023/04/02 14:04:14 by yumnakan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,20 +133,20 @@ char	*get_next_line(int fd)
 		}
 	}
 	return ("zzz");
-	// while (read(fd, buf, BUFFER_SIZE) != -1)
-	// {
-	// 	if (ft_strchr(buf, '\n') != NULL)
-	// 	{
-	// 		current = join(current, output());
-	// 		next = ft_strchr(buf, '\n') +1;
-	// 	}
-	// 	while (ft_strchr(buf, '\n') == NULL)
-	// 	{
+	while (read(fd, buf, BUFFER_SIZE) != -1)
+	{
+		if (ft_strchr(buf, '\n') != NULL)
+		{
+			current = join(current, output());
+			next = ft_strchr(buf, '\n') +1;
+		}
+		while (ft_strchr(buf, '\n') == NULL)
+		{
 			
-	// 		read(fd, output, BUFFER_SIZE);
-	// 	}
-	// 	ft_strchr(output, '\n')
-	// }
+			read(fd, output, BUFFER_SIZE);
+		}
+		ft_strchr(output, '\n')
+	}
 
 }
 int main()
@@ -156,15 +156,15 @@ int main()
 	// return (1);
 }
 
-			// 	ft_strjoin(keep, ft_strdup((const char*)buf))
-			// 		// return ("end");
-			// 		return (ft_strjoin(keep, ft_strdup((const char*)buf)));
-			// 	}
-			// 	i++;
-			// }
-			// buf[i] = '\0';
-			// keep = ft_strjoin(keep, ft_strdup((const char*)buf));
-			// return("done");
+// 				ft_strjoin(keep, ft_strdup((const char*)buf))
+// 					// return ("end");
+// 					return (ft_strjoin(keep, ft_strdup((const char*)buf)));
+// 				}
+// 				i++;
+// 			}
+// 			buf[i] = '\0';
+// 			keep = ft_strjoin(keep, ft_strdup((const char*)buf));
+// 			return("done");
 			
 // if (i < BUFFER_SIZE - 1) //\n のあともなんかある
 // {
